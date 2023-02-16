@@ -60,8 +60,8 @@ export const msalConfig: Configuration = {
     auth: {
         clientId: "221310f3-aaaf-4daa-9d35-8bb99140965d",
         authority: b2cPolicies.authorities.signUpSignIn.authority,
-        redirectUri: "http://localhost:4200/",
-        postLogoutRedirectUri: "http://localhost:4200/",
+        redirectUri: "https://lemon-forest-0c7e70810.2.azurestaticapps.net/",
+        postLogoutRedirectUri: "https://lemon-forest-0c7e70810.2.azurestaticapps.net/",
         navigateToLoginRequestUrl: true,
         validateAuthority: false,
       },
