@@ -20,15 +20,15 @@ export const isIE = window.navigator.userAgent.indexOf('MSIE ') > -1 || window.n
  */
 export const b2cPolicies = {
     names: {
-        signUpSignIn: "B2C_1_usersgrp",
-        resetPassword: "B2C_1_usersgrp",
+        signUpSignIn: "B2C_1_usr_grp",
+        resetPassword: "B2C_1_usr_grp",
     },
     authorities: {
         signUpSignIn: {
-            authority: "https://gbmultra.b2clogin.com/gbmultra.onmicrosoft.com/B2C_1_usersgrp"
+            authority: "https://gbmapp.b2clogin.com/gbmapp.onmicrosoft.com/B2C_1_usr_grp"
         },
         resetPassword: {
-            authority: "https://gbmultra.b2clogin.com/gbmultra.onmicrosoft.com/B2C_1_usersgrp"
+            authority: "https://gbmapp.b2clogin.com/gbmapp.onmicrosoft.com/B2C_1_usr_grp"
         }
     }
 }
@@ -42,8 +42,8 @@ export const b2cPolicies = {
  */
 export const apiConfig: {b2cScopes: string[], webApi: string} = {
     b2cScopes: [
-      'https://gbmultra.onmicrosoft.com/api/b2cdemo.read',
-      'https://gbmultra.onmicrosoft.com/api/b2cdemo.read'
+      'https://gbmapp.onmicrosoft.com/api/b2cdemo.read',
+      'https://gbmapp.onmicrosoft.com/api/b2cdemo.read'
     ],
     webApi: 'http://localhost:9000/profile' 
 };
@@ -58,9 +58,10 @@ export const apiConfig: {b2cScopes: string[], webApi: string} = {
  */
 export const msalConfig: Configuration = {
     auth: {
-        clientId: "221310f3-aaaf-4daa-9d35-8bb99140965d",
+        // clientId: "221310f3-aaaf-4daa-9d35-8bb99140965d",
+        clientId:"3c3f9529-0f3d-4b3c-946e-25b46ac36604",
         authority: b2cPolicies.authorities.signUpSignIn.authority,
-        redirectUri: "https://lemon-forest-0c7e70810.2.azurestaticapps.net/",
+        redirectUri: "http://localhost:4200/",
         postLogoutRedirectUri: "https://lemon-forest-0c7e70810.2.azurestaticapps.net/",
         navigateToLoginRequestUrl: true,
         validateAuthority: false,
